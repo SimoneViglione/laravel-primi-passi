@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $hello_world = 'Hello World!';
+    $icon = "fa-solid fa-earth-europe";
+
+    $data = [
+        'hello_world'=>$hello_world,
+        'icon'=>$icon
+    ];
+
+    return view('home', $data);
 });
