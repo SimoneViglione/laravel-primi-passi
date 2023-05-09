@@ -24,4 +24,18 @@ Route::get('/', function () {
     ];
 
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('cake', function () {
+
+    $cake = 'Torta!';
+    $icon = "fa-solid fa-cake-candles";
+
+    $data = [
+        'cake'=>$cake,
+        'icon'=>$icon
+    ];
+
+    return view('cake', $data);
+
+})->name('cake');
